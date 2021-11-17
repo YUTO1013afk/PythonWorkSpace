@@ -1,5 +1,7 @@
 def list2int(s):
     """list2int 文字列を数値に変換した値を返す（List 対応）"""
+    if(type(s) == int):
+        return s
     if(type(s) == str):
         if(s.isalpha() == True):
             return 0
@@ -15,7 +17,7 @@ def list2int(s):
                     s[i] = 0
         return s
     else:
-        return s
+        return None
 print(list2int(['5','ab','100',10,1]))
 print(list2int('100'))
 print(list2int('xyz'))
