@@ -1,4 +1,3 @@
-import os
 word = []
 f = open('word_list.txt', 'r')
 for i in f:
