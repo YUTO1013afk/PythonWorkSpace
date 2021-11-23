@@ -5,7 +5,7 @@ f.close
 
 # counting
 words = {}
-data = re.split(r'\s+|\,|\.|\(|\)|\"|\:', data.lower())
+data = re.split(r'\s|\,|\.|\(|\)|\"|\:', data.lower())
 for item in data:
     if len(item)-1 < 1:  
         data.remove("")
