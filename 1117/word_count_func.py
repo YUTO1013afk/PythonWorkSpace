@@ -16,4 +16,4 @@ for word in data:
 # sort by count
 d = [(v,k) for k,v in words.items()]
 for count, word in d[:]:
-    print ('%s :%d' % (word, count))
+    print('%s :%d' % (word, count))
