@@ -12,7 +12,6 @@ for item in data:
 data.sort()
 for word in data:
     words[word] = words.get(word, 0) + 1
-    word.strip()
 
 # sort by count
 d = [(v,k) for k,v in words.items()]
