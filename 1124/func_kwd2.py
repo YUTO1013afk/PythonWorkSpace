@@ -1,5 +1,5 @@
 def check_shopping(**kwargs):
-    for key, value in dic_order.items():
+    for value in dic_order.values():
         if value >= 100: 
             return True
         else:
