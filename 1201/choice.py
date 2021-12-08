@@ -7,6 +7,9 @@ def choice_func(number):
         return even()
     else:
         return odd()
+    # func_dic = {1: odd, 0: even}
+    # func = func_dic[number % 2 == 0]
+    # return func
 # main
 while True:
     num = input("数字を入力してください。（0：終了）")
