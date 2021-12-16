@@ -1,0 +1,12 @@
+2020-06-10 18:57:40.079496 function:test args:(100,) kwargs:{}
+2020-06-10 18:57:40.079570 function:test args:(0,) kwargs:{}
+2020-06-10 18:57:40.079598 function:test args:(1,) kwargs:{}
+2020-06-10 18:57:40.079617 function:test args:(2,) kwargs:{}
+2020-06-10 18:57:40.079635 function:test args:(3,) kwargs:{}
+2020-06-10 18:57:40.079653 function:test args:(4,) kwargs:{}
+2020-08-06 14:19:22.924648 function:test args:(100,) kwargs:{}
+2020-08-06 14:19:22.925447 function:test args:(0,) kwargs:{}
+2020-08-06 14:19:22.925528 function:test args:(1,) kwargs:{}
+2020-08-06 14:19:22.925591 function:test args:(2,) kwargs:{}
+2020-08-06 14:19:22.925650 function:test args:(3,) kwargs:{}
+2020-08-06 14:19:22.925706 function:test args:(4,) kwargs:{}
