@@ -1,0 +1,6 @@
+2021-12-17 03:04:27.457863 function:test args:(100,) kwargs:{}
+2021-12-17 03:04:27.458838 function:test args:(0,) kwargs:{}
+2021-12-17 03:04:27.458838 function:test args:(1,) kwargs:{}
+2021-12-17 03:04:27.459823 function:test args:(2,) kwargs:{}
+2021-12-17 03:04:27.459823 function:test args:(3,) kwargs:{}
+2021-12-17 03:04:27.459823 function:test args:(4,) kwargs:{}
