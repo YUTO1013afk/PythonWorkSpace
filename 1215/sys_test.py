@@ -8,7 +8,7 @@ row_no = 0
 idx = 1
 while idx <= len(argv)-1:
     print("-"*3,str(argv[idx]),"-"*3)
-    fileobj = open(argv[idx], "r")
+    fileobj = open(argv[idx], "r", encoding="utf8")
     line = fileobj.readline()
     line = line.rstrip("\n")
     while line:
