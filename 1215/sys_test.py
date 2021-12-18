@@ -1,7 +1,10 @@
 import sys
 argv = sys.argv
+if (len(argv) == 1):
+    print("引数なし")
+else:
+    print("引数：",str(argv))
 row_no = 0
-print("引数：",str(argv))
 idx = 1
 while idx <= len(argv)-1:
     print("-"*3,str(argv[idx]),"-"*3)
