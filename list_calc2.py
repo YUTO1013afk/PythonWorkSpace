@@ -32,17 +32,21 @@ while True:
             continue
         if (len(result) == 1):
             if (calc in sym and str(result[-1]).isdigit() == False):
-                print("数値を入力してください。")
+                print("\"" + "(" + "\"" + "または" + "数値を入力してください。")
                 del result[-1]
                 continue
         if (len(result) == 1):
             if (calc == ")"): 
-                print("入力が正しくありません。")
+                print("\"" + "(" + "\"" + "または" + "数値を入力してください。")
                 del result[-1]
                 continue
     if (len(result) > 1):
         if (str(result[-2]).isdigit() == True and calc.isdigit() == True):
-            print("入力が正しくありません。")
+            print("\"" + ")" + "\"" + "または" + "演算子を入力してください。")
+            del result[-1]
+            continue
+        elif (str(result[-2]).isdigit() == True and result[-2] in sym):
+            print("\"" + "(" + "\"" + "または" + "数値を入力してください。")
             del result[-1]
             continue
         elif (result[-2] == "(" and str(result[-1]).isdigit() == False and calc in sym):
@@ -52,7 +56,11 @@ while True:
         elif (result[-2] == "(" and calc == "("):
             print("数値を入力してください。")
             del result[-1]
-            continue  
+            continue
+        elif (result[-2] == "(" and calc == ")"):
+            print("数値を入力してください。")
+            del result[-1]
+            continue
     if (len(result) > 1):
         if (calc == ")" and calc in sym and calc != "*"):
             if (str(result[-2]).isdigit() == False):
@@ -61,7 +69,7 @@ while True:
                 continue
         if (result[-2] in sym and calc in sym):
             if (result[-2] != "*"):
-                print("入力が正しくありません。")
+                print("数値を入力してください。")
                 del result[-1]
                 continue
         if (result[-2] == "/" and calc == "0"):
@@ -69,12 +77,12 @@ while True:
             del result[-1]
             continue
         elif (result[-2] in sym and calc == ")"):
-            print("数値を入力してください。")
+            print("\"" + "(" + "\"" + "または" + "数値を入力してください。")
             del result[-1]
             continue
     if (len(result) > 2):
         if (result[-3] in paren and calc in paren and str(result[-2]).isdigit() == True):
-            print("入力が正しくありません。")
+            print("演算子を入力してください。")
             del result[-1]
             continue
         elif (result[-3] == "*" and result[-2] == "*" and calc == "*"):
@@ -83,11 +91,11 @@ while True:
             continue
         elif (result[-3] == ")" and calc.isdigit() == True or calc == "("):
             if (result[-2] not in sym):
-                print("演算子を入力してください。")
+                print("\"" + ")" + "\"" + "または" + "演算子を入力してください。")
                 del result[-1]
                 continue
         elif (result[-2] not in sym and str(result[-2]).isdigit() == True and calc == "("):
-            print("演算子を入力してください。")
+            print("\"" + ")" + "\"" + "または" + "演算子を入力してください。")
             del result[-1]
             continue
 if (result[-1] == "="):
