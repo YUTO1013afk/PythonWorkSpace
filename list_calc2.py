@@ -41,7 +41,7 @@ while True:
                 del result[-1]
                 continue
     if (len(result) > 1):
-        if (str(result[-2]).isdigit() == True and calc.isdigit() == True):
+        if (str(result[-2]).isdigit() == True and calc.isdigit() == True and result[-3] != "("):
             print("\"" + ")" + "\"" + "または" + "演算子を入力してください。")
             del result[-1]
             continue
@@ -59,6 +59,14 @@ while True:
             continue
         elif (result[-2] == "(" and calc == ")"):
             print("数値を入力してください。")
+            del result[-1]
+            continue
+        elif (str(result[-2]).isdigit() == True and calc == "("):
+            del result[-1]
+            result.append("*")
+            result.append("(")
+        elif (str(result[-2]).isdigit() == True and calc.isdigit() == True and result[-3] == "("):
+            print("演算子を入力してください。")
             del result[-1]
             continue
     if (len(result) > 1):
@@ -80,6 +88,10 @@ while True:
             print("\"" + "(" + "\"" + "または" + "数値を入力してください。")
             del result[-1]
             continue
+        elif (str(result[-2]).isdigit() == True and calc == "("):
+            del result[-1]
+            result.append("*")
+            result.append("(")
     if (len(result) > 2):
         if (result[-3] in paren and calc in paren and str(result[-2]).isdigit() == True):
             print("演算子を入力してください。")
@@ -90,7 +102,7 @@ while True:
             del result[-1]
             continue
         elif (result[-3] == ")" and calc.isdigit() == True or calc == "("):
-            if (result[-2] not in sym):
+            if (result[-2] not in sym and result[0] == "("):
                 print("\"" + ")" + "\"" + "または" + "演算子を入力してください。")
                 del result[-1]
                 continue
@@ -98,6 +110,10 @@ while True:
             print("\"" + ")" + "\"" + "または" + "演算子を入力してください。")
             del result[-1]
             continue
+        elif (str(result[-2]).isdigit() == True and calc == "("):
+            del result[-1]
+            result.append("*")
+            result.append("(")
 if (result[-1] == "="):
     del result[-1]
 elif (result[-2] == ")"):
