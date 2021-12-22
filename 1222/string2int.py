@@ -3,8 +3,7 @@ def str2int(s):
     if(type(s) == str):
         if(s.isalpha() == True):
             return 0
-    if(type(s) == str):
-        if(s.isdigit() == True):
+        elif(s.isdigit() == True):
             return int(s)
     else:
         return s
