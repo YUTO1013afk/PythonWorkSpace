@@ -2,7 +2,7 @@ import datetime
 
 def log_file(func):
     def function(*args,**kwargs):
-        with open('python.log.txt', 'a') as f:
+        with open('python.log', 'a') as f:
             reslut = func(*args,**kwargs)
             f.write(str(datetime.datetime.now()) + " ")
             f.write('function:' + func.__name__ + " ")
